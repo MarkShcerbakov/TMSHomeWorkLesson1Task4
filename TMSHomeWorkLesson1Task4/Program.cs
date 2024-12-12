@@ -69,10 +69,11 @@ if (purchases.Count == 0)
 }
 else
 {
+    var allPurchases = purchases.GroupBy(t => t).ToArray();
     Console.WriteLine("\nВами были куплены следующие товары:");
-    for (int purchase = 0; purchase < purchases.Count; purchase++)
+    for (int purchase = 0; purchase < allPurchases.Length; purchase++)
     {
-        Console.WriteLine($"{purchase + 1}. {purchases[purchase].Product} за {purchases[purchase].Price} монет");
+        Console.WriteLine($"{purchase + 1}. {allPurchases[purchase].Key.Product} x {allPurchases[purchase].Count()} за {allPurchases[purchase].Key.Price * allPurchases[purchase].Count()} монет");
     }
     Console.WriteLine($"На сумму: {purchases.Sum(x => x.Price)} монет");
 }
