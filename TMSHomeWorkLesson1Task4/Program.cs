@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Homework after lesson 1 in TMS school, task4.");
 
-Console.WriteLine("Добро пожаловать в мгазин! Сколько у Вас на счету монет?");
+Console.WriteLine("Добро пожаловать в магазин! Сколько у Вас на счету монет?");
 int cash;
 while (true)
 {
